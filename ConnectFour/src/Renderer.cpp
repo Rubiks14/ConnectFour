@@ -21,6 +21,7 @@ void Renderer::createRenderer(std::string name, int width, int height, Uint32 fl
     SDL_SetRenderDrawBlendMode(renderer,SDL_BLENDMODE_BLEND);
 	renderFrame = SDL_CreateTexture(renderer, SDL_PIXELFORMAT_RGBA8888, SDL_TEXTUREACCESS_TARGET, width, height);
 	screenSize = {0, 0, width, height};
+	TTF_Init();
 }
 
 void Renderer::destroy(void) {

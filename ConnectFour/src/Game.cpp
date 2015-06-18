@@ -163,9 +163,9 @@ void Game::redWins(){
 	SDL_Rect textDrawLocation;
 	textDrawLocation.x = 0;
 	textDrawLocation.y = 0;
-	textDrawLocation.h = 50;
-	textDrawLocation.w = 200;
-	TTF_Font* textFont = TTF_OpenFont("C:/Windows/Fonts/Areil.ttf", 50);
+	TTF_Font* textFont = TTF_OpenFont("C:/Windows/Fonts/Arial.ttf", 60);
+	TTF_SizeText(textFont, "Red Player has Won!", &textDrawLocation.w, &textDrawLocation.h);
+	std::cout << TTF_GetError() << std::endl;
 	renderer->drawText("Red Player has Won!", textFont, fontColor, textDrawLocation);
 	renderer->update();
 	SDL_Delay(500);
